@@ -1,0 +1,390 @@
+{
+  "fixtures": [
+    {
+      "backend": {
+        "boundaries": [
+          74,
+          122
+        ],
+        "error": null,
+        "policy": "strict",
+        "requests": [
+          {
+            "end": 74,
+            "framing": "content-length",
+            "header_end": 70,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a0d0a50494e47",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 122,
+            "framing": "none",
+            "header_end": 122,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 74,
+            "target": "/visible"
+          }
+        ]
+      },
+      "description": "Ordinary Content-Length control with a following request.",
+      "divergence": {
+        "at_request_index": null,
+        "classification": "no_mismatch",
+        "confirmed_boundary_mismatch": false
+      },
+      "edge": {
+        "boundaries": [
+          74,
+          122
+        ],
+        "error": null,
+        "policy": "strict",
+        "requests": [
+          {
+            "end": 74,
+            "framing": "content-length",
+            "header_end": 70,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a0d0a50494e47",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 122,
+            "framing": "none",
+            "header_end": 122,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 74,
+            "target": "/visible"
+          }
+        ]
+      },
+      "forwarding": {
+        "forwarded_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a0d0a50494e47474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+        "forwarded_length": 122,
+        "matches_input": true
+      },
+      "input_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a0d0a50494e47474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+      "input_length": 122,
+      "name": "cl-normal"
+    },
+    {
+      "backend": {
+        "boundaries": [
+          93,
+          141
+        ],
+        "error": null,
+        "policy": "strict",
+        "requests": [
+          {
+            "end": 93,
+            "framing": "chunked",
+            "header_end": 79,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a340d0a50494e470d0a300d0a0d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 141,
+            "framing": "none",
+            "header_end": 141,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 93,
+            "target": "/visible"
+          }
+        ]
+      },
+      "description": "Ordinary chunked control with a following request.",
+      "divergence": {
+        "at_request_index": null,
+        "classification": "no_mismatch",
+        "confirmed_boundary_mismatch": false
+      },
+      "edge": {
+        "boundaries": [
+          93,
+          141
+        ],
+        "error": null,
+        "policy": "strict",
+        "requests": [
+          {
+            "end": 93,
+            "framing": "chunked",
+            "header_end": 79,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a340d0a50494e470d0a300d0a0d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 141,
+            "framing": "none",
+            "header_end": 141,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 93,
+            "target": "/visible"
+          }
+        ]
+      },
+      "forwarding": {
+        "forwarded_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a340d0a50494e470d0a300d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+        "forwarded_length": 141,
+        "matches_input": true
+      },
+      "input_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a340d0a50494e470d0a300d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+      "input_length": 141,
+      "name": "chunked-normal"
+    },
+    {
+      "backend": {
+        "boundaries": [
+          104,
+          161,
+          209
+        ],
+        "error": null,
+        "policy": "te-first",
+        "requests": [
+          {
+            "end": 104,
+            "framing": "chunked",
+            "header_end": 99,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a2036320d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a300d0a0d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 161,
+            "framing": "none",
+            "header_end": 161,
+            "method": "GET",
+            "raw_hex": "474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 104,
+            "target": "/synthetic-shadow"
+          },
+          {
+            "end": 209,
+            "framing": "none",
+            "header_end": 209,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 161,
+            "target": "/visible"
+          }
+        ]
+      },
+      "description": "CL-first edge consumes a synthetic request that TE-first backend sees separately.",
+      "divergence": {
+        "at_request_index": 1,
+        "classification": "confirmed_boundary_mismatch",
+        "confirmed_boundary_mismatch": true
+      },
+      "edge": {
+        "boundaries": [
+          161,
+          209
+        ],
+        "error": null,
+        "policy": "cl-first",
+        "requests": [
+          {
+            "end": 161,
+            "framing": "content-length",
+            "header_end": 99,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a2036320d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a300d0a0d0a474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 209,
+            "framing": "none",
+            "header_end": 209,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 161,
+            "target": "/visible"
+          }
+        ]
+      },
+      "forwarding": {
+        "forwarded_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a2036320d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a300d0a0d0a474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+        "forwarded_length": 209,
+        "matches_input": true
+      },
+      "input_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a2036320d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a300d0a0d0a474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+      "input_length": 209,
+      "name": "cl-te"
+    },
+    {
+      "backend": {
+        "boundaries": [
+          102,
+          159
+        ],
+        "error": {
+          "code": "invalid_request_line",
+          "detail": "expected METHOD target HTTP/1.1",
+          "offset": 159
+        },
+        "policy": "cl-first",
+        "requests": [
+          {
+            "end": 102,
+            "framing": "content-length",
+            "header_end": 98,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a33390d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 159,
+            "framing": "none",
+            "header_end": 159,
+            "method": "GET",
+            "raw_hex": "474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 102,
+            "target": "/synthetic-shadow"
+          }
+        ]
+      },
+      "description": "TE-first edge consumes a chunk that CL-first backend ends before synthetic data.",
+      "divergence": {
+        "at_request_index": 1,
+        "classification": "confirmed_boundary_mismatch",
+        "confirmed_boundary_mismatch": true
+      },
+      "edge": {
+        "boundaries": [
+          166,
+          214
+        ],
+        "error": null,
+        "policy": "te-first",
+        "requests": [
+          {
+            "end": 166,
+            "framing": "chunked",
+            "header_end": 98,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a33390d0a474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a0d0a300d0a0d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 214,
+            "framing": "none",
+            "header_end": 214,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 166,
+            "target": "/visible"
+          }
+        ]
+      },
+      "forwarding": {
+        "forwarded_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a33390d0a474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a0d0a300d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+        "forwarded_length": 214,
+        "matches_input": true
+      },
+      "input_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20340d0a5472616e736665722d456e636f64696e673a206368756e6b65640d0a0d0a33390d0a474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a0d0a300d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+      "input_length": 214,
+      "name": "te-cl"
+    },
+    {
+      "backend": {
+        "boundaries": [
+          152,
+          200
+        ],
+        "error": null,
+        "policy": "duplicate-cl-last",
+        "requests": [
+          {
+            "end": 152,
+            "framing": "content-length",
+            "header_end": 90,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20350d0a436f6e74656e742d4c656e6774683a2036320d0a0d0a48454c4c4f474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 200,
+            "framing": "none",
+            "header_end": 200,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 152,
+            "target": "/visible"
+          }
+        ]
+      },
+      "description": "First versus last differing Content-Length values.",
+      "divergence": {
+        "at_request_index": 1,
+        "classification": "confirmed_boundary_mismatch",
+        "confirmed_boundary_mismatch": true
+      },
+      "edge": {
+        "boundaries": [
+          95,
+          152,
+          200
+        ],
+        "error": null,
+        "policy": "duplicate-cl-first",
+        "requests": [
+          {
+            "end": 95,
+            "framing": "content-length",
+            "header_end": 90,
+            "method": "POST",
+            "raw_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20350d0a436f6e74656e742d4c656e6774683a2036320d0a0d0a48454c4c4f",
+            "start": 0,
+            "target": "/synthetic"
+          },
+          {
+            "end": 152,
+            "framing": "none",
+            "header_end": 152,
+            "method": "GET",
+            "raw_hex": "474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 95,
+            "target": "/synthetic-shadow"
+          },
+          {
+            "end": 200,
+            "framing": "none",
+            "header_end": 200,
+            "method": "GET",
+            "raw_hex": "474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+            "start": 152,
+            "target": "/visible"
+          }
+        ]
+      },
+      "forwarding": {
+        "forwarded_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20350d0a436f6e74656e742d4c656e6774683a2036320d0a0d0a48454c4c4f474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+        "forwarded_length": 200,
+        "matches_input": true
+      },
+      "input_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20350d0a436f6e74656e742d4c656e6774683a2036320d0a0d0a48454c4c4f474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+      "input_length": 200,
+      "name": "duplicate-cl"
+    }
+  ],
+  "offset_unit": "byte",
+  "schema_version": 1
+}
