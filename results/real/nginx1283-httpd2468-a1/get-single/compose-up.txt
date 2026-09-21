@@ -1,0 +1,22 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a1-get-single", "up", "-d", "--pull", "never", "backend", "relay", "edge"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Network desynclab-nginx1283-httpd2468-a1-get-single_lab Creating 
+ Network desynclab-nginx1283-httpd2468-a1-get-single_lab Creating 
+ Network desynclab-nginx1283-httpd2468-a1-get-single_lab Created 
+ Network desynclab-nginx1283-httpd2468-a1-get-single_lab Created 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-backend-1 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-backend-1 Created 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-relay-1 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-relay-1 Created 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-edge-1 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-edge-1 Created 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-backend-1 Starting 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-backend-1 Started 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-relay-1 Starting 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-relay-1 Started 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-edge-1 Starting 
+ Container desynclab-nginx1283-httpd2468-a1-get-single-edge-1 Started 

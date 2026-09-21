@@ -1,0 +1,10 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a2-nginx-edge-get-single", "logs", "--no-color", "--timestamps", "backend"]
+EXIT: 0
+
+STDOUT:
+backend-1  | 2026-09-20T15:25:26.018261799Z [Sun Sep 20 15:25:26.018160 2026] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.68 (Unix) configured -- resuming normal operations
+backend-1  | 2026-09-20T15:25:26.018277081Z [Sun Sep 20 15:25:26.018189 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND -c Include conf/extra/desync-lab.conf'
+backend-1  | 2026-09-20T15:25:28.143069229Z 172.18.0.3 - - [20/Sep/2026:15:25:28 +0000] "GET /visible HTTP/1.1" 200 8
+backend-1  | 2026-09-20T15:25:28.143084191Z LAB_BACKEND peer=172.18.0.3 port=55318 pid=9 keepalive=0 status=200 connection=+ request="GET /visible HTTP/1.1"
+
+STDERR:

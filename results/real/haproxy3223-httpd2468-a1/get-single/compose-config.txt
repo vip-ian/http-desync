@@ -1,0 +1,104 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-single", "config"]
+EXIT: 0
+
+STDOUT:
+name: desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-single
+services:
+  backend:
+    command:
+      - httpd
+      - -DFOREGROUND
+      - -c
+      - Include conf/extra/desync-lab.conf
+    image: httpd:2.4-alpine@sha256:4e585da9d0125dec36d4500a9f5c5df7b2c0a01f67cb47865a91a4b05bdbec1b
+    networks:
+      lab: null
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync\real_lab\backend.conf
+        target: /usr/local/apache2/conf/extra/desync-lab.conf
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync\real_lab\www
+        target: /usr/local/apache2/htdocs
+        read_only: true
+        bind: {}
+  client:
+    depends_on:
+      edge:
+        condition: service_started
+        required: true
+    entrypoint:
+      - python
+      - -B
+      - /lab/real_lab/client.py
+    environment:
+      LAB_CASE_NAME: get-single
+      LAB_RUN_ID: haproxy3223-httpd2468-a1
+    image: python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534
+    networks:
+      lab: null
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync
+        target: /lab
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync\results\real
+        target: /artifacts
+        bind: {}
+  edge:
+    depends_on:
+      relay:
+        condition: service_started
+        required: true
+    image: haproxy:3.2.23-alpine@sha256:5961c68bc8a81c5124d0a98ab20f81b74717d6afe596e805977d9cf84c126222
+    networks:
+      lab: null
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync\real_lab\haproxy.cfg
+        target: /usr/local/etc/haproxy/haproxy.cfg
+        read_only: true
+        bind: {}
+  relay:
+    command:
+      - python
+      - -B
+      - /lab/real_lab/relay.py
+    depends_on:
+      backend:
+        condition: service_started
+        required: true
+    environment:
+      LAB_CASE_NAME: get-single
+      LAB_RUN_ID: haproxy3223-httpd2468-a1
+    image: python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534
+    networks:
+      lab: null
+    security_opt:
+      - no-new-privileges:true
+    volumes:
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync
+        target: /lab
+        read_only: true
+        bind: {}
+      - type: bind
+        source: C:\Users\0xian\Desktop\github\http-desync\results\real
+        target: /artifacts
+        bind: {}
+networks:
+  lab:
+    name: desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-single_lab
+    internal: true
+
+STDERR:

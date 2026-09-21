@@ -1,0 +1,20 @@
+{
+  "case": "duplicate-cl",
+  "client_local": "('172.18.0.5', 58798)",
+  "connect_attempts": 1,
+  "elapsed_ms": 3.632,
+  "endpoint": "edge:8080",
+  "finished_utc": "2026-09-20T15:24:19.148101+00:00",
+  "input_hex": "504f5354202f73796e74686574696320485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a436f6e74656e742d4c656e6774683a20350d0a436f6e74656e742d4c656e6774683a2036320d0a0d0a48454c4c4f474554202f73796e7468657469632d736861646f7720485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a474554202f76697369626c6520485454502f312e310d0a486f73743a206578616d706c652e696e76616c69640d0a0d0a",
+  "input_length": 200,
+  "input_sha256": "da06ac1f74f85f2608ee916d9a2a34dfb4018a1c7d151587f91b3c6cb07011c5",
+  "outcome": "eof",
+  "response_chunks": [],
+  "response_hex": "",
+  "response_length": 0,
+  "run_id": "haproxy3223-httpd2468-a1",
+  "schema_version": 1,
+  "sent_complete": true,
+  "started_utc": "2026-09-20T15:24:19.144440+00:00",
+  "target": "edge"
+}

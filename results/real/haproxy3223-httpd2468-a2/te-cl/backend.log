@@ -1,0 +1,10 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a2-haproxy-edge-te-cl", "logs", "--no-color", "--timestamps", "backend"]
+EXIT: 0
+
+STDOUT:
+backend-1  | 2026-09-20T15:28:57.564257819Z [Sun Sep 20 15:28:57.564021 2026] [mpm_event:notice] [pid 1:tid 1] AH00489: Apache/2.4.68 (Unix) configured -- resuming normal operations
+backend-1  | 2026-09-20T15:28:57.564320167Z [Sun Sep 20 15:28:57.564064 2026] [core:notice] [pid 1:tid 1] AH00094: Command line: 'httpd -D FOREGROUND -c Include conf/extra/desync-lab.conf'
+backend-1  | 2026-09-20T15:28:59.638459971Z 172.18.0.3 - - [20/Sep/2026:15:28:59 +0000] "POST /synthetic HTTP/1.1" 200 10
+backend-1  | 2026-09-20T15:28:59.638483053Z LAB_BACKEND peer=172.18.0.3 port=42934 pid=9 keepalive=0 status=200 connection=+ request="POST /synthetic HTTP/1.1"
+
+STDERR:

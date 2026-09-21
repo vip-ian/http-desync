@@ -1,0 +1,150 @@
+{
+  "cases": [
+    {
+      "backend_logs_exit": 0,
+      "case": "get-single",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:25:41.208474+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-get-single",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:25:25.092419+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "get-pipeline",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:25:57.293588+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-get-pipeline",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:25:41.209215+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "cl-normal",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:26:13.468163+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:25:57.293781+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "chunked-normal",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:26:29.623639+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-chunked-normal",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:26:13.468371+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "cl-te",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:26:39.670905+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-te",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:26:29.623856+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "te-cl",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:26:49.824962+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-te-cl",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:26:39.671113+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "duplicate-cl",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge": "nginx",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:26:59.893919+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:26:49.825126+00:00",
+      "target": "edge",
+      "up_exit": 0
+    }
+  ],
+  "compose_file": "compose.yaml",
+  "config_sha256": {
+    "compose.yaml": "2d68a3e5f2634cfccf5a110a1a974f1859f07189c3f35171be281dc11d3ad0f1",
+    "real_lab\\backend.conf": "773313e7230f79ce111a6de64874597a1516b0666a0a15b3e31258c2a2fed754",
+    "real_lab\\cases.py": "52220a4ff0111c48a662ba8c46ab8b8c133182eb281818a98c4a5136020fb8c6",
+    "real_lab\\client.py": "c087d9dac8cf08127d615644091e26c678a6fe0f4be86165b754a8c9c639ee40",
+    "real_lab\\nginx.conf": "9bbea5fada20d3a1d3b137b730ad343c22cfd0284788bedf8fc1a3aaea56d5ec",
+    "real_lab\\relay.py": "ab9b90ff26eb4887e675c524f448bb643a0eb086d35fed5af59527724b9a38c0"
+  },
+  "edge": "nginx",
+  "finished_utc": "2026-09-20T15:26:59.893927+00:00",
+  "network": "Compose internal network; no host-published ports",
+  "run_id": "nginx1283-httpd2468-a2",
+  "schema_version": 1,
+  "selected_cases": [
+    "get-single",
+    "get-pipeline",
+    "cl-normal",
+    "chunked-normal",
+    "cl-te",
+    "te-cl",
+    "duplicate-cl"
+  ],
+  "started_utc": "2026-09-20T15:25:24.636766+00:00",
+  "target": "edge"
+}

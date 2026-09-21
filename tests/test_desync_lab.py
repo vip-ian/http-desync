@@ -85,6 +85,51 @@ class DesyncLabTests(unittest.TestCase):
         self.assertEqual(parsed.error.code, "body_too_large")
         self.assertEqual(parsed.error.offset, 0)
 
+    def test_incomplete_content_length_body_is_not_a_request(self):
+        headers = b"POST /short HTTP/1.1\r\nContent-Length: 4\r\n\r\n"
+        stream = headers + b"PIN"
+        parsed = desync_lab.parse_stream(stream, "strict")
+        self.assertEqual(parsed.requests, ())
+        self.assertEqual(parsed.boundaries, [])
+        self.assertIsNotNone(parsed.error)
+        self.assertEqual(parsed.error.code, "incomplete_body")
+        self.assertEqual(parsed.error.offset, len(headers))
+
+        result = desync_lab.simulate(stream, "strict", "strict")
+        self.assertEqual(result["forwarding"]["forwarded_length"], 0)
+        self.assertEqual(result["edge"]["requests"], [])
+
+    def test_incomplete_chunk_data_and_terminal_are_not_requests(self):
+        headers = b"POST /short HTTP/1.1\r\nTransfer-Encoding: chunked\r\n\r\n"
+        cases = (
+            ("data", b"4\r\nPIN", "incomplete_chunk_data", len(headers) + 3),
+            ("terminal", b"4\r\nPING\r\n0\r\n", "incomplete_trailers", len(headers) + 12),
+        )
+        for name, body, code, offset in cases:
+            with self.subTest(name=name):
+                stream = headers + body
+                parsed = desync_lab.parse_stream(stream, "strict")
+                self.assertEqual(parsed.requests, ())
+                self.assertEqual(parsed.boundaries, [])
+                self.assertIsNotNone(parsed.error)
+                self.assertEqual(parsed.error.code, code)
+                self.assertEqual(parsed.error.offset, offset)
+
+                result = desync_lab.simulate(stream, "strict", "strict")
+                self.assertEqual(result["forwarding"]["forwarded_length"], 0)
+                self.assertEqual(result["edge"]["requests"], [])
+
+    def test_matching_policies_do_not_report_boundary_mismatch(self):
+        for name in ("cl-te", "te-cl", "duplicate-cl"):
+            fixture = self.by_name[name]
+            for policy in (fixture["edge_policy"], fixture["backend_policy"]):
+                with self.subTest(name=name, policy=policy):
+                    result = desync_lab.simulate(fixture["data"], policy, policy)
+                    self.assertFalse(result["divergence"]["confirmed_boundary_mismatch"])
+                    self.assertNotEqual(
+                        result["divergence"]["classification"], "confirmed_boundary_mismatch"
+                    )
+
     def test_offsets_measure_bytes_and_raw_slices_are_preserved(self):
         body = "é".encode("utf-8")
         stream = b"POST /bytes HTTP/1.1\r\nContent-Length: 2\r\n\r\n" + body

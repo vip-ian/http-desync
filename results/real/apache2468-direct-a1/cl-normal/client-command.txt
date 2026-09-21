@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-apache2468-direct-a1-nginx-backend-cl-normal", "run", "--rm", "--no-deps", "-T", "client", "--case", "cl-normal", "--target", "backend", "--run-id", "apache2468-direct-a1"]
+EXIT: 0
+
+STDOUT:
+{"case": "cl-normal", "outcome": "eof", "response_length": 415}
+
+STDERR:
+ Container desynclab-apache2468-direct-a1-nginx-backend-cl-normal-client-run-dc75ba33b57c Creating 
+ Container desynclab-apache2468-direct-a1-nginx-backend-cl-normal-client-run-dc75ba33b57c Created 

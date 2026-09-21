@@ -1,0 +1,150 @@
+{
+  "cases": [
+    {
+      "backend_logs_exit": 0,
+      "case": "get-single",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:23:07.975227+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-single",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:22:51.889889+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "get-pipeline",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:23:24.048465+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-pipeline",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:23:07.976227+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "cl-normal",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:23:40.108325+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-cl-normal",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:23:24.048652+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "chunked-normal",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:23:56.121915+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-chunked-normal",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:23:40.109153+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "cl-te",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:24:06.164876+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-cl-te",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:23:56.122122+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "te-cl",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:24:16.154032+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:24:06.165111+00:00",
+      "target": "edge",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "duplicate-cl",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge": "haproxy",
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:24:26.184207+00:00",
+      "project": "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-duplicate-cl",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:24:16.154208+00:00",
+      "target": "edge",
+      "up_exit": 0
+    }
+  ],
+  "compose_file": "compose.haproxy.yaml",
+  "config_sha256": {
+    "compose.haproxy.yaml": "7d57a338307cae78b4aa79da59cd3474634c8d04504220267de80bdf7aa47464",
+    "real_lab\\backend.conf": "773313e7230f79ce111a6de64874597a1516b0666a0a15b3e31258c2a2fed754",
+    "real_lab\\cases.py": "52220a4ff0111c48a662ba8c46ab8b8c133182eb281818a98c4a5136020fb8c6",
+    "real_lab\\client.py": "c087d9dac8cf08127d615644091e26c678a6fe0f4be86165b754a8c9c639ee40",
+    "real_lab\\haproxy.cfg": "c3d2138efe050196bb5eeb89385037b8b9d69f7aed7d8041b93faf0505cc5714",
+    "real_lab\\relay.py": "ab9b90ff26eb4887e675c524f448bb643a0eb086d35fed5af59527724b9a38c0"
+  },
+  "edge": "haproxy",
+  "finished_utc": "2026-09-20T15:24:26.184214+00:00",
+  "network": "Compose internal network; no host-published ports",
+  "run_id": "haproxy3223-httpd2468-a1",
+  "schema_version": 1,
+  "selected_cases": [
+    "get-single",
+    "get-pipeline",
+    "cl-normal",
+    "chunked-normal",
+    "cl-te",
+    "te-cl",
+    "duplicate-cl"
+  ],
+  "started_utc": "2026-09-20T15:22:51.441900+00:00",
+  "target": "edge"
+}

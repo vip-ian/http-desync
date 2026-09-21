@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a2-nginx-edge-chunked-normal", "run", "--rm", "--no-deps", "-T", "client", "--case", "chunked-normal", "--target", "edge", "--run-id", "nginx1283-httpd2468-a2"]
+EXIT: 0
+
+STDOUT:
+{"case": "chunked-normal", "outcome": "read_timeout", "response_length": 447}
+
+STDERR:
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-chunked-normal-client-run-da304374023a Creating 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-chunked-normal-client-run-da304374023a Created 

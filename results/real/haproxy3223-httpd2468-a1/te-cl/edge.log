@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl", "logs", "--no-color", "--timestamps", "edge"]
+EXIT: 0
+
+STDOUT:
+edge-1  | 2026-09-20T15:24:07.356161032Z [NOTICE]   (1) : Initializing new worker (8)
+edge-1  | 2026-09-20T15:24:07.386876326Z [NOTICE]   (1) : Loading success.
+edge-1  | 2026-09-20T15:24:09.145415366Z 172.18.0.5:37744 [20/Sep/2026:15:24:09.135] http_in captured_backend/relay 0/0/0/10/10 200 200 - - ---- 1/1/0/0/0 0/0 "POST /synthetic HTTP/1.1"
+
+STDERR:

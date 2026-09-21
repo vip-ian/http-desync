@@ -1,0 +1,7 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-duplicate-cl", "logs", "--no-color", "--timestamps", "relay"]
+EXIT: 0
+
+STDOUT:
+relay-1  | 2026-09-20T15:24:17.393265961Z relay listening on 9000; recording to /artifacts/haproxy3223-httpd2468-a1/duplicate-cl/relay.jsonl
+
+STDERR:

@@ -1,0 +1,12 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-apache2468-direct-a1-nginx-backend-te-cl", "down", "--remove-orphans"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Container desynclab-apache2468-direct-a1-nginx-backend-te-cl-backend-1 Stopping 
+ Container desynclab-apache2468-direct-a1-nginx-backend-te-cl-backend-1 Stopped 
+ Container desynclab-apache2468-direct-a1-nginx-backend-te-cl-backend-1 Removing 
+ Container desynclab-apache2468-direct-a1-nginx-backend-te-cl-backend-1 Removed 
+ Network desynclab-apache2468-direct-a1-nginx-backend-te-cl_lab Removing 
+ Network desynclab-apache2468-direct-a1-nginx-backend-te-cl_lab Removed 

@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a2-nginx-edge-get-single", "run", "--rm", "--no-deps", "-T", "client", "--case", "get-single", "--target", "edge", "--run-id", "nginx1283-httpd2468-a2"]
+EXIT: 0
+
+STDOUT:
+{"case": "get-single", "outcome": "read_timeout", "response_length": 222}
+
+STDERR:
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-get-single-client-run-b53816668a00 Creating 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-get-single-client-run-b53816668a00 Created 

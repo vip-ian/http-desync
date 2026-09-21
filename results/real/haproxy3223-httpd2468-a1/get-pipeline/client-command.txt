@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-pipeline", "run", "--rm", "--no-deps", "-T", "client", "--case", "get-pipeline", "--target", "edge", "--run-id", "haproxy3223-httpd2468-a1"]
+EXIT: 0
+
+STDOUT:
+{"case": "get-pipeline", "outcome": "read_timeout", "response_length": 412}
+
+STDERR:
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-pipeline-client-run-2a2c75f13408 Creating 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-get-pipeline-client-run-2a2c75f13408 Created 

@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a2-haproxy-edge-te-cl", "run", "--rm", "--no-deps", "-T", "client", "--case", "te-cl", "--target", "edge", "--run-id", "haproxy3223-httpd2468-a2"]
+EXIT: 0
+
+STDOUT:
+{"case": "te-cl", "outcome": "eof", "response_length": 228}
+
+STDERR:
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-te-cl-client-run-4d2aa9e80fbc Creating 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-te-cl-client-run-4d2aa9e80fbc Created 

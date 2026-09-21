@@ -1,0 +1,20 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl", "down", "--remove-orphans"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-edge-1 Stopping 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-edge-1 Stopped 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-edge-1 Removing 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-edge-1 Removed 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-relay-1 Stopping 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-relay-1 Stopped 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-relay-1 Removing 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-relay-1 Removed 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-backend-1 Stopping 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-backend-1 Stopped 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-backend-1 Removing 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl-backend-1 Removed 
+ Network desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl_lab Removing 
+ Network desynclab-nginx1283-httpd2468-a2-nginx-edge-duplicate-cl_lab Removed 

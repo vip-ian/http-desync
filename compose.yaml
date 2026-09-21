@@ -1,0 +1,51 @@
+name: http-desync-real-lab
+
+services:
+  backend:
+    image: httpd:2.4-alpine@sha256:4e585da9d0125dec36d4500a9f5c5df7b2c0a01f67cb47865a91a4b05bdbec1b
+    command: ["httpd", "-DFOREGROUND", "-c", "Include conf/extra/desync-lab.conf"]
+    volumes:
+      - ./real_lab/backend.conf:/usr/local/apache2/conf/extra/desync-lab.conf:ro
+      - ./real_lab/www:/usr/local/apache2/htdocs:ro
+    networks: [lab]
+    security_opt: ["no-new-privileges:true"]
+
+  relay:
+    image: python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534
+    command: ["python", "-B", "/lab/real_lab/relay.py"]
+    environment:
+      LAB_RUN_ID: ${LAB_RUN_ID:-manual}
+      LAB_CASE_NAME: ${LAB_CASE_NAME:-manual}
+    volumes:
+      - ./:/lab:ro
+      - ./results/real:/artifacts
+    depends_on: [backend]
+    networks: [lab]
+    security_opt: ["no-new-privileges:true"]
+
+  edge:
+    image: nginx:1.28-alpine@sha256:a8b39bd9cf0f83869a2162827a0caf6137ddf759d50a171451b335cecc87d236
+    volumes:
+      - ./real_lab/nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on: [relay]
+    networks: [lab]
+    security_opt: ["no-new-privileges:true"]
+
+  client:
+    image: python:3.11-slim@sha256:9534e5a8e315485d4061ed659af0fd78a284c015f9b73661b41d6bab25604534
+    entrypoint: ["python", "-B", "/lab/real_lab/client.py"]
+    environment:
+      LAB_RUN_ID: ${LAB_RUN_ID:-manual}
+      LAB_CASE_NAME: ${LAB_CASE_NAME:-manual}
+    volumes:
+      - ./:/lab:ro
+      - ./results/real:/artifacts
+    depends_on: [edge]
+    networks: [lab]
+    security_opt: ["no-new-privileges:true"]
+
+networks:
+  lab:
+    internal: true
+
+

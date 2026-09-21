@@ -1,0 +1,22 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a1-duplicate-cl", "up", "-d", "--pull", "never", "backend", "relay", "edge"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Network desynclab-nginx1283-httpd2468-a1-duplicate-cl_lab Creating 
+ Network desynclab-nginx1283-httpd2468-a1-duplicate-cl_lab Creating 
+ Network desynclab-nginx1283-httpd2468-a1-duplicate-cl_lab Created 
+ Network desynclab-nginx1283-httpd2468-a1-duplicate-cl_lab Created 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-backend-1 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-backend-1 Created 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-relay-1 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-relay-1 Created 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-edge-1 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-edge-1 Created 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-backend-1 Starting 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-backend-1 Started 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-relay-1 Starting 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-relay-1 Started 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-edge-1 Starting 
+ Container desynclab-nginx1283-httpd2468-a1-duplicate-cl-edge-1 Started 

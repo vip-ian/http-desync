@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a1-get-pipeline", "run", "--rm", "--no-deps", "-T", "client", "--case", "get-pipeline", "--run-id", "nginx1283-httpd2468-a1"]
+EXIT: 0
+
+STDOUT:
+{"case": "get-pipeline", "outcome": "read_timeout", "response_length": 444}
+
+STDERR:
+ Container desynclab-nginx1283-httpd2468-a1-get-pipeline-client-run-f8a004f9fb70 Creating 
+ Container desynclab-nginx1283-httpd2468-a1-get-pipeline-client-run-f8a004f9fb70 Created 

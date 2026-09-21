@@ -1,0 +1,20 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal", "down", "--remove-orphans"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-edge-1 Stopping 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-edge-1 Stopped 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-edge-1 Removing 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-edge-1 Removed 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-relay-1 Stopping 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-relay-1 Stopped 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-relay-1 Removing 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-relay-1 Removed 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-backend-1 Stopping 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-backend-1 Stopped 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-backend-1 Removing 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal-backend-1 Removed 
+ Network desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal_lab Removing 
+ Network desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-normal_lab Removed 

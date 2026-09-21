@@ -1,0 +1,14 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl", "up", "-d", "--pull", "never", "backend"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Network desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl_lab Creating 
+ Network desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl_lab Creating 
+ Network desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl_lab Created 
+ Network desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl_lab Created 
+ Container desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl-backend-1 Creating 
+ Container desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl-backend-1 Created 
+ Container desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl-backend-1 Starting 
+ Container desynclab-apache2468-direct-a1-nginx-backend-duplicate-cl-backend-1 Started 

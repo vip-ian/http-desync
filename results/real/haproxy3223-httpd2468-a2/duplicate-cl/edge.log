@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl", "logs", "--no-color", "--timestamps", "edge"]
+EXIT: 0
+
+STDOUT:
+edge-1  | 2026-09-20T15:29:07.812642695Z [NOTICE]   (1) : Initializing new worker (8)
+edge-1  | 2026-09-20T15:29:07.839406561Z [NOTICE]   (1) : Loading success.
+edge-1  | 2026-09-20T15:29:09.551037207Z 172.18.0.5:42830 [20/Sep/2026:15:29:09.550] http_in http_in/<NOSRV> -1/-1/-1/-1/0 400 0 - - PR-- 1/1/0/0/0 0/0 "<BADREQ>"
+
+STDERR:

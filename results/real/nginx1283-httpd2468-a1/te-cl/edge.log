@@ -1,0 +1,24 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a1-te-cl", "logs", "--no-color", "--timestamps", "edge"]
+EXIT: 0
+
+STDOUT:
+edge-1  | 2026-09-20T15:11:53.250319030Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+edge-1  | 2026-09-20T15:11:53.250762876Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+edge-1  | 2026-09-20T15:11:53.250800823Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+edge-1  | 2026-09-20T15:11:53.260819135Z 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+edge-1  | 2026-09-20T15:11:53.265559587Z 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+edge-1  | 2026-09-20T15:11:53.265668594Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+edge-1  | 2026-09-20T15:11:53.265673234Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+edge-1  | 2026-09-20T15:11:53.267058593Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+edge-1  | 2026-09-20T15:11:53.267769702Z /docker-entrypoint.sh: Configuration complete; ready for start up
+edge-1  | 2026-09-20T15:11:53.272121081Z 2026/09/20 15:11:53 [notice] 1#1: using the "epoll" event method
+edge-1  | 2026-09-20T15:11:53.272128500Z 2026/09/20 15:11:53 [notice] 1#1: nginx/1.28.3
+edge-1  | 2026-09-20T15:11:53.272129644Z 2026/09/20 15:11:53 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+edge-1  | 2026-09-20T15:11:53.272130427Z 2026/09/20 15:11:53 [notice] 1#1: OS: Linux 6.18.33.2-microsoft-standard-WSL2
+edge-1  | 2026-09-20T15:11:53.272131082Z 2026/09/20 15:11:53 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+edge-1  | 2026-09-20T15:11:53.272226637Z 2026/09/20 15:11:53 [notice] 1#1: start worker processes
+edge-1  | 2026-09-20T15:11:53.272322100Z 2026/09/20 15:11:53 [notice] 1#1: start worker process 30
+edge-1  | 2026-09-20T15:11:55.032509703Z 2026/09/20 15:11:55 [info] 30#30: *1 client sent "Content-Length" and "Transfer-Encoding" headers at the same time while reading client request headers, client: 172.18.0.5, server: _, request: "POST /synthetic HTTP/1.1", host: "example.invalid"
+edge-1  | 2026-09-20T15:11:55.033460466Z {"time":"2026-09-20T15:11:55+00:00","connection":"1","connection_requests":"1","request":"POST /synthetic HTTP/1.1","status":"400","upstream_addr":"","upstream_status":""}
+
+STDERR:

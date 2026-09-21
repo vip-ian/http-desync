@@ -1,0 +1,24 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a1-get-single", "logs", "--no-color", "--timestamps", "edge"]
+EXIT: 0
+
+STDOUT:
+edge-1  | 2026-09-20T15:10:39.012413074Z /docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
+edge-1  | 2026-09-20T15:10:39.012435278Z /docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
+edge-1  | 2026-09-20T15:10:39.012939359Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
+edge-1  | 2026-09-20T15:10:39.024598521Z 10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
+edge-1  | 2026-09-20T15:10:39.028908032Z 10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
+edge-1  | 2026-09-20T15:10:39.028981793Z /docker-entrypoint.sh: Sourcing /docker-entrypoint.d/15-local-resolvers.envsh
+edge-1  | 2026-09-20T15:10:39.028989237Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
+edge-1  | 2026-09-20T15:10:39.030313087Z /docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
+edge-1  | 2026-09-20T15:10:39.031030620Z /docker-entrypoint.sh: Configuration complete; ready for start up
+edge-1  | 2026-09-20T15:10:39.034670829Z 2026/09/20 15:10:39 [notice] 1#1: using the "epoll" event method
+edge-1  | 2026-09-20T15:10:39.034679310Z 2026/09/20 15:10:39 [notice] 1#1: nginx/1.28.3
+edge-1  | 2026-09-20T15:10:39.034680473Z 2026/09/20 15:10:39 [notice] 1#1: built by gcc 15.2.0 (Alpine 15.2.0) 
+edge-1  | 2026-09-20T15:10:39.034681202Z 2026/09/20 15:10:39 [notice] 1#1: OS: Linux 6.18.33.2-microsoft-standard-WSL2
+edge-1  | 2026-09-20T15:10:39.034681853Z 2026/09/20 15:10:39 [notice] 1#1: getrlimit(RLIMIT_NOFILE): 1048576:1048576
+edge-1  | 2026-09-20T15:10:39.034791441Z 2026/09/20 15:10:39 [notice] 1#1: start worker processes
+edge-1  | 2026-09-20T15:10:39.034877249Z 2026/09/20 15:10:39 [notice] 1#1: start worker process 30
+edge-1  | 2026-09-20T15:10:40.797906674Z {"time":"2026-09-20T15:10:40+00:00","connection":"1","connection_requests":"1","request":"GET /visible HTTP/1.1","status":"200","upstream_addr":"172.18.0.3:9000","upstream_status":"200"}
+edge-1  | 2026-09-20T15:10:46.803453013Z 2026/09/20 15:10:46 [info] 30#30: *1 client 172.18.0.5 closed keepalive connection
+
+STDERR:

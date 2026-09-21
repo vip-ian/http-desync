@@ -1,0 +1,7 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a1-te-cl", "logs", "--no-color", "--timestamps", "relay"]
+EXIT: 0
+
+STDOUT:
+relay-1  | 2026-09-20T15:11:53.292430488Z relay listening on 9000; recording to /artifacts/nginx1283-httpd2468-a1/te-cl/relay.jsonl
+
+STDERR:

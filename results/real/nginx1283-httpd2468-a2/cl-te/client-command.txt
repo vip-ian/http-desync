@@ -1,0 +1,9 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.yaml", "-p", "desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-te", "run", "--rm", "--no-deps", "-T", "client", "--case", "cl-te", "--target", "edge", "--run-id", "nginx1283-httpd2468-a2"]
+EXIT: 0
+
+STDOUT:
+{"case": "cl-te", "outcome": "eof", "response_length": 309}
+
+STDERR:
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-te-client-run-5eef4c932fd4 Creating 
+ Container desynclab-nginx1283-httpd2468-a2-nginx-edge-cl-te-client-run-5eef4c932fd4 Created 

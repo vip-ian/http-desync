@@ -1,0 +1,20 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl", "down", "--remove-orphans"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-edge-1 Stopping 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-edge-1 Stopped 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-edge-1 Removing 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-edge-1 Removed 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-relay-1 Stopping 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-relay-1 Stopped 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-relay-1 Removing 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-relay-1 Removed 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-backend-1 Stopping 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-backend-1 Stopped 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-backend-1 Removing 
+ Container desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl-backend-1 Removed 
+ Network desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl_lab Removing 
+ Network desynclab-haproxy3223-httpd2468-a2-haproxy-edge-duplicate-cl_lab Removed 

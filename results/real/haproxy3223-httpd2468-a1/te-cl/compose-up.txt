@@ -1,0 +1,22 @@
+COMMAND: ["docker", "compose", "-f", "C:\\Users\\0xian\\Desktop\\github\\http-desync\\compose.haproxy.yaml", "-p", "desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl", "up", "-d", "--pull", "never", "backend", "relay", "edge"]
+EXIT: 0
+
+STDOUT:
+
+STDERR:
+ Network desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl_lab Creating 
+ Network desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl_lab Creating 
+ Network desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl_lab Created 
+ Network desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl_lab Created 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-backend-1 Creating 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-backend-1 Created 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-relay-1 Creating 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-relay-1 Created 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-edge-1 Creating 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-edge-1 Created 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-backend-1 Starting 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-backend-1 Started 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-relay-1 Starting 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-relay-1 Started 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-edge-1 Starting 
+ Container desynclab-haproxy3223-httpd2468-a1-haproxy-edge-te-cl-edge-1 Started 

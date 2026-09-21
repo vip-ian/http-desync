@@ -1,0 +1,133 @@
+{
+  "cases": [
+    {
+      "backend_logs_exit": 0,
+      "case": "get-single",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:10:53.905205+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-get-single",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:10:37.835219+00:00",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "get-pipeline",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:11:10.017970+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-get-pipeline",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:10:53.906642+00:00",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "cl-normal",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:11:26.023812+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-cl-normal",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:11:10.018169+00:00",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "chunked-normal",
+      "client_exit": 0,
+      "config_exit": 0,
+      "control_check": {
+        "passed": true,
+        "reasons": []
+      },
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:11:42.044648+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-chunked-normal",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:11:26.023993+00:00",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "cl-te",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:11:52.073906+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-cl-te",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:11:42.044935+00:00",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "te-cl",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:12:02.047235+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-te-cl",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:11:52.074091+00:00",
+      "up_exit": 0
+    },
+    {
+      "backend_logs_exit": 0,
+      "case": "duplicate-cl",
+      "client_exit": 0,
+      "config_exit": 0,
+      "down_exit": 0,
+      "edge_logs_exit": 0,
+      "finished_utc": "2026-09-20T15:12:12.049994+00:00",
+      "project": "desynclab-nginx1283-httpd2468-a1-duplicate-cl",
+      "relay_logs_exit": 0,
+      "started_utc": "2026-09-20T15:12:02.047471+00:00",
+      "up_exit": 0
+    }
+  ],
+  "config_sha256": {
+    "compose.yaml": "2d68a3e5f2634cfccf5a110a1a974f1859f07189c3f35171be281dc11d3ad0f1",
+    "real_lab\\backend.conf": "773313e7230f79ce111a6de64874597a1516b0666a0a15b3e31258c2a2fed754",
+    "real_lab\\cases.py": "52220a4ff0111c48a662ba8c46ab8b8c133182eb281818a98c4a5136020fb8c6",
+    "real_lab\\client.py": "1aeb6251fd5f4536e1214af13fb2c64e9fe6ee09d5a683923a35a56cb7763147",
+    "real_lab\\nginx.conf": "9bbea5fada20d3a1d3b137b730ad343c22cfd0284788bedf8fc1a3aaea56d5ec",
+    "real_lab\\relay.py": "ab9b90ff26eb4887e675c524f448bb643a0eb086d35fed5af59527724b9a38c0"
+  },
+  "finished_utc": "2026-09-20T15:12:12.050003+00:00",
+  "network": "Compose internal network; no host-published ports",
+  "run_id": "nginx1283-httpd2468-a1",
+  "schema_version": 1,
+  "selected_cases": [
+    "get-single",
+    "get-pipeline",
+    "cl-normal",
+    "chunked-normal",
+    "cl-te",
+    "te-cl",
+    "duplicate-cl"
+  ],
+  "started_utc": "2026-09-20T15:10:37.384770+00:00"
+}
